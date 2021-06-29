@@ -1,0 +1,53 @@
+{% load static %}
+
+
+<html>
+	<head>
+		<center>
+			<h1>GLS University</h1>
+		</center>
+	</head>
+
+	<body>
+		<center>				
+			<img src="{% static 'Images/logo.jpg' %}" width="20%" height="20%">
+		</center>
+	</body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+		<form action='/Mymarks/' method='GET'><!-- action to connect another page--->
+		<table cellpadding="10" align="center" border="4">
+			<tr>
+				<td colspan="2">
+					<font size="4"><b>Enter Login Details</b></font> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					User Name : 
+				</td>
+				<td>
+					<input type="text" name='uname'> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Password : 
+				</td>
+				<td>
+					<input type="password" name='upass'> 
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<center><input type="Submit" name="Login Here" value="Login Here"> </center>
+				</td>
+			</tr>
+			</table>
+		</form>
+
+</html>

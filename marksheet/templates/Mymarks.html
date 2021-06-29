@@ -1,0 +1,103 @@
+{% load static %}
+
+<html>
+	<body>
+		<center>
+			
+			<img src="{% static 'Images/logo.jpg' %}" width="20%" height="20%">
+			<h1>GLS UNIVERSITY</h1>
+			<h2>STATEMENT OF MARKS</h2>
+
+		</center>
+
+		<table border="2" cellpadding="10" width="100%">
+			
+			<tr>
+				<td><font size="4"><b>Name : </b></font></td>
+				<td><font size="4">{{ Name }}</font></td>
+			</tr>
+
+			<tr>
+				<td><font size="4"><b>Institute : </b></font></td>
+				<td><font size="4">{{ Institute }}</font></td>				
+			</tr>
+
+			<tr>
+				<td><font size="4"><b>Program : </b></font></td>
+				<td><font size="4">{{ program }}</font></td>				
+			</tr>
+
+			<tr>
+				<td><font size="4"><b>Semester : </b></font></td>
+				<td><font size="4">{{ semester }}</font></td>				
+			</tr>
+
+			<tr>
+				<td><font size="4"><b>Seat No. : </b></font></td>
+				<td><font size="4">{{ seat }}</font></td>				
+			</tr>
+
+			<tr>
+				<td><font size="4"><b>Enrollment No. : </b></font></td>
+				<td><font size="4">{{ enroll }}</font></td>				
+			</tr>
+
+		</table>
+
+		<br>
+		<br>
+
+		<table border="2" cellpadding="10">
+			
+			<tr>
+				<td><font size="4"><b>Subject Name </b></font></td>
+				<td><font size="4"><b>Obtained Marks</b></font></td>
+				<td><font size="4"><b>Grade</b></font></td>
+			</tr>
+			
+				{% for i in sub1 %}
+					<tr>
+						<td>
+							<font size="4"> {{i}} </font>
+						</td>
+						{% for j in sub1.python %}
+							<td>
+								<font size="4"> {{j}} </font>	
+							</td>
+						{% endfor %}
+					</tr>
+				{% endfor %}
+				{% for i in sub2 %}
+					<tr>
+						<td>
+							<font size="4"> {{i}} </font>
+						</td>
+						{% for j in sub2.AI %}
+							<td>
+								<font size="4"> {{j}} </font>	
+							</td>
+						{% endfor %}
+					</tr>
+				{% endfor %}
+				{% for i in sub3 %}
+					<tr>
+						<td>
+							<font size="4"> {{i}} </font>
+						</td>
+						{% for j in sub3.SE %}
+							<td>
+								<font size="4"> {{j}} </font>	
+							</td>
+						{% endfor %}
+					</tr>
+				{% endfor %}
+
+			<tr>
+				<td><font type="bold" size="4">Total : {{ total }}</font></td>
+				<td colspan="2"><font type="bold" size="4">{{ obtained }}</font></td>		
+			</tr>
+
+		</table>
+
+	</body>
+</html>
